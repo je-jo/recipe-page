@@ -1,0 +1,56 @@
+@import url(minireset.css);
+
+:root {
+    --clr: #333;
+}
+
+* {
+    outline: 1px solid salmon;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px 0;
+    color: var(--clr);
+}
+
+.wrapper {
+    width: clamp(296px, 94%, 969px);
+    margin: 0 auto;
+}
+
+/* header */
+
+header {
+    padding: 12px 0;
+}
+
+.subtitle {
+    max-width: 610px;
+}
+
+.subtitle img {
+    float: left;
+    margin: 12px;
+}
+
+.subtitle p {
+    overflow-y: hidden;
+}
+
+/* main */ 
+
+main {
+    flex-grow: 1;
+    background-color: rgb(167, 222, 224);
+}
+
+/* footer */
+
+footer {
+    margin-top: auto;
+    text-align: center;
+}
+
