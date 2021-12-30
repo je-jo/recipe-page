@@ -1,7 +1,16 @@
 @import url(minireset.css);
 
 :root {
-    --clr: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    --clr-base: #333;
+    --clr-black: #000;
+    --clr-gray2: #4f4f4f;
+    --clr-gray3: #828282;
+    --fs-h1: 24px;
+    --lh-h1: 32px;
+    --fs-subt: 12px;
+    --lh-subt: 14.63px;
 }
 
 * {
@@ -13,7 +22,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     padding: 20px 0;
-    color: var(--clr);
+    color: var(--clr-base);
 }
 
 .wrapper {
@@ -21,14 +30,35 @@ body {
     margin: 0 auto;
 }
 
+/* typography */
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: var(--fs-h1);
+    line-height: var(--lh-h1);
+    color: var(--clr-black);
+}
+
+.subtitle p {
+    font-style: italic;
+    font-weight: 500;
+    font-size: var(--fs-subt);
+    line-height: var(--lh-subt);
+    color: var(--clr-gray2);
+    max-width: 64ch;
+}
+
+footer {
+    font-weight: 500;
+    font-size: var(--fs-subt);
+    color: var(--clr-gray3);
+}
+
 /* header */
 
 header {
     padding: 12px 0;
-}
-
-.subtitle {
-    max-width: 610px;
 }
 
 .subtitle img {
@@ -52,5 +82,16 @@ main {
 footer {
     margin-top: auto;
     text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+
+    :root {
+        --fs-h1: 48px;
+        --lh-h1: 64px;
+        --fs-subt: 14px;
+        --lh-subt: 17.07px;
+    }
+
 }
 
