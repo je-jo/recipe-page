@@ -7,26 +7,16 @@
     --clr-gray3: #828282;
     --clr-gray4: #bdbdbd;
     --clr-orange: #F2994A;
-    --fs-h1: 24px;
-    --fs-h2: 18px;
-    --fs-subt: 12px;
-    --fs-src: 12px;
-    --fs-card: 8px;
-    --fs-card-l: 10px;
+
+    --font-size-xxs: 0.5rem;
+    --font-size-xs: 0.625rem;
+    --font-size-s: 0.75rem;
+    --font-size-m: 0.875rem;
+    --font-size-l: 1rem;
+    --font-size-xl: 1.125rem;
+    --font-size-xxl: 1.5rem;
     --icon-size: 17px;
-
-
-
-
-    --lh-h1: 32px;
-    --lh-h2: 24px;
-    --lh-subt: 14.63px;
-    --lh-src: 18px;
 }
-
-/* * {
-    outline: 1px solid salmon;
-} */
 
 body {
     display: flex;
@@ -40,23 +30,6 @@ body {
     margin: 0 auto;
 }
 
-/* typography */
-
-h1, h2 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-}
-
-h3 {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 16px;
-    line-height: 24px;
-    color: var(--clr-gray1);
-    margin: 30px 0;
-
-}
-
 .bold {
     font-weight: 700;
 }
@@ -65,18 +38,11 @@ h3 {
     font-style: italic;
 }
 
-.attribution {
-    font-style: italic;
-    font-size: var(--fs-src);
-    line-height: var(--lh-src);
-    color: var(--clr-gray4);
-    margin-bottom: 30px;
-}
-
-footer {
-    font-weight: 500;
-    font-size: var(--fs-subt);
-    color: var(--clr-gray3);
+h1,
+h2,
+h3,
+li::before {
+    font-family: 'Playfair Display', serif;
 }
 
 /* header */
@@ -86,8 +52,7 @@ header {
 }
 
 h1 {
-    font-size: var(--fs-h1);
-    line-height: var(--lh-h1);
+    font-size: var(--font-size-xxl);
     padding: 0.1em 0;
 }
 
@@ -99,18 +64,17 @@ h1 {
 }
 
 .subtitle p {
-    font-style: italic;
     font-weight: 500;
-    font-size: var(--fs-subt);
-    line-height: var(--lh-subt);
+    font-size: var(--font-size-s);
+    line-height: 120%;
     color: var(--clr-gray2);
     max-width: 64ch;
 }
 
-.big {
+.hero {
     display: block;
     border-radius: 12px;
-    margin: 2em 0;
+    margin: 1.5em 0;
 }
 
 /* main */ 
@@ -127,7 +91,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    font-size: var(--fs-card-l);
+    font-size: var(--font-size-xs);
     font-weight: 500;
     color: var(--clr-gray1);
     text-transform: uppercase;
@@ -137,7 +101,7 @@ main {
 
 .card-item {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, auto);
     gap: 3px;
     align-items: center;
     justify-content: start;
@@ -159,27 +123,42 @@ main {
 
 .card-title {
     color: var(--clr-gray4);
-    font-size: var(--fs-card);
+    font-size: var(--font-size-xxs);
     font-weight: 700;
 }
-
-
 
 /* text */
 
 h2 {
     color: var(--clr-gray1);
-    font-size: var(--fs-h2);
-    line-height: var(--lh-h2);
+    font-size: var(--font-size-xl);
+    line-height: 133%;
     margin-bottom: 30px;
+}
+
+h2:last-of-type {
+    margin-top: 30px;
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: var(--font-size-l);
+    line-height: 24px;
+    color: var(--clr-gray1);
+    margin: 30px 0;
 }
 
 label {
     display: grid;
     grid-template-columns: 1em auto;
-    gap: 8px;
-    align-items: baseline;
+    gap: 1em;
+    align-items: start;
     line-height: 25px;
+}
+
+input[type="checkbox"] {
+    width: 21px;
+    height: 21px;
 }
 
 ol {
@@ -203,7 +182,7 @@ li::before {
     color: white;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 32px;
     width: 36px;
     height: 36px;
@@ -211,32 +190,52 @@ li::before {
     text-align: center;
 }
 
+.attribution {
+    font-size: var(--font-size-s);
+    line-height: 150%;
+    color: var(--clr-gray4);
+    margin-bottom: 30px;
+}
+
 /* footer */
 
 footer {
     margin-top: auto;
     text-align: center;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--clr-gray3);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: var(--clr-orange);
 }
 
 @media screen and (min-width: 768px) {
 
     :root {
-        --fs-h1: 48px;
-        --lh-h1: 64px;
-        --fs-h2: 24px;
-        --lh-h2: 32px;
-        --fs-subt: 14px;
-        --lh-subt: 17.07px;
-        --fs-src: 16px;
-        --lh-src: 24px;
-        --fs-card: 10px;
-        --fs-card-l: 14px;
+        --font-size-xxs: 0.625rem;
+        --font-size-xs: 0.875rem;
+        --font-size-s: 0.875rem;
+        --font-size-m: 1rem;
+        --font-size-l: 1.125rem;
+        --font-size-xl: 1.5rem;
+        --font-size-xxl: 3rem;
         --icon-size: 34px;
     }
 
     main {
         flex-direction: row-reverse;
         justify-content: space-between;
+    }
+
+    .hero {
+        margin: 2.5em 0;
     }
 
     .text {
@@ -261,5 +260,8 @@ footer {
         grid-column: auto;
     }
 
-}
+    .attribution {
+        font-size: var(--font-size-m);
+    }
 
+}
