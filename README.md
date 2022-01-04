@@ -30,7 +30,7 @@
 
 ## Overview
 
-![screenshot](hhttps://raw.githubusercontent.com/je-jo/recipe-page/main/images/recipe-page.png)
+![screenshot](https://raw.githubusercontent.com/je-jo/recipe-page/main/images/recipe-page.png)
 
 This looked simple enough, but there's quite a lot going on. I've practiced a bit with CSS grid, and tried to keep a clean and readable code.
 
@@ -47,9 +47,9 @@ This looked simple enough, but there's quite a lot going on. I've practiced a bi
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/OEKdUZ6xs0h99C38XVht) was to build an application to complete the following user stories:
 
-- [ x ] User story: I can see a recipe with ingredients and instructions
-- [ x ] User story: I can select a checkbox if I have the ingredients
-- [ x ] User story: I can see the number of servings, baking times
+- [x] User story: I can see a recipe with ingredients and instructions
+- [x] User story: I can select a checkbox if I have the ingredients
+- [x] User story: I can see the number of servings, baking times
 
 ## Acknowledgements
 
